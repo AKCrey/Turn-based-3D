@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField]private GameObject projectilPrefab;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bubblePrefab;
     [SerializeField] private Transform shootingStartPosition;
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            GameObject newProjectile = Instantiate(projectilPrefab);
+            GameObject newProjectile = Instantiate(bulletPrefab);
+            newProjectile.transform.position = shootingStartPosition.position;
+            newProjectile.GetComponent<BulletMover>().Initialize();
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            GameObject newProjectile = Instantiate(bubblePrefab);
             newProjectile.transform.position = shootingStartPosition.position;
             newProjectile.GetComponent<BulletMover>().Initialize();
         }

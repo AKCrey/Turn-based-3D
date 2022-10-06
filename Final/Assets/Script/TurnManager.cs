@@ -12,8 +12,6 @@ public class TurnManager : MonoBehaviour
 
     private int currentPlayer;
 
-    
-
     private void Awake()
     {
         if(instance != null)
@@ -53,6 +51,8 @@ public class TurnManager : MonoBehaviour
     {
         players[currentPlayer].GetComponentInChildren<Camera>().enabled = false;
         players[currentPlayer].GetComponentInChildren<MouseLook>().enabled = false;
+        //players[currentPlayer].GetComponentInChildren<Gun>().enabled = false;
+
 
         int nextPlayer = currentPlayer + 1;
         currentPlayer -= 1;
@@ -74,6 +74,7 @@ public class TurnManager : MonoBehaviour
 
         players[currentPlayer].GetComponentInChildren<Camera>().enabled = true;
         players[currentPlayer].GetComponentInChildren<MouseLook>().enabled = true;
+        //players[currentPlayer].GetComponentInChildren<Gun>().enabled = true;
 
     }
 
