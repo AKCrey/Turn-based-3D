@@ -6,8 +6,8 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bubblePrefab;
-    [SerializeField] private Transform shootingStartPosition;
     public float shootForce;
+    public float upwardForce;
     public float spread;
 
     [SerializeField] private Camera cam;
@@ -91,8 +91,8 @@ public class Gun : MonoBehaviour
             //newProjectile.GetComponent<BulletMover>().Initialize();
 
             //Add forces to bullet
-            //newProjectile.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-            newProjectile.GetComponent<Rigidbody>().AddForce(cam.transform.up, ForceMode.Impulse);
+            newProjectile.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
+            newProjectile.GetComponent<Rigidbody>().AddForce(cam.transform.up * upwardForce, ForceMode.Impulse);
 
 
             /*GameObject newProjectile = Instantiate(bubblePrefab, bulletSpawnPoint.position, Quaternion.identity);

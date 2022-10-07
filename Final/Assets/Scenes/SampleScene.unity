@@ -43571,7 +43571,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2578350915926818830, guid: 866da1f9e87f16a4b9f054ed74d68a76, type: 3}
   bubblePrefab: {fileID: 2998713802704698568, guid: 1a16641289c50654ab820bc8408f41ee, type: 3}
   shootingStartPosition: {fileID: 1454823123}
-  shootForce: 50
+  shootForce: 20
   spread: 1
   cam: {fileID: 963194227}
   bulletSpawnPoint: {fileID: 1454823123}
@@ -46230,7 +46230,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2578350915926818830, guid: 866da1f9e87f16a4b9f054ed74d68a76, type: 3}
   bubblePrefab: {fileID: 2998713802704698568, guid: 1a16641289c50654ab820bc8408f41ee, type: 3}
   shootingStartPosition: {fileID: 4164366064058101848}
-  shootForce: 50
+  shootForce: 20
   spread: 1
   cam: {fileID: 1909929567}
   bulletSpawnPoint: {fileID: 4164366064058101848}

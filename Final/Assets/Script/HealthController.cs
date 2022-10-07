@@ -48,16 +48,12 @@ public class HealthController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other) //other == what we collide with
+    private void OnCollisionEnter(Collision other) //other == what we collide with
     {
         const int DAMAGE_POINTS = 1;
 
-        if (other.CompareTag(lethalBulletTag))
-        {
-
-            RecieveDamage(DAMAGE_POINTS);
-
-        }
-
+        
+        RecieveDamage(DAMAGE_POINTS);
+        
     }
 }

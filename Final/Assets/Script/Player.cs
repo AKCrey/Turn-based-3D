@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
     void Shoot()
     { 
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))//wasPressedThisFrame to shoot once per press
+        if (Input.GetKeyDown(KeyCode.G) /*|| Input.GetKeyDown(KeyCode.Mouse1)*/)//wasPressedThisFrame to shoot once per press
         {
             /*foreach (Gun gun in guns)
             {
