@@ -31,6 +31,11 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public string EnemyTag = "Enemy";
+
+    private HealthController health = null;
+
+
     public bool IsTurn { get { return TurnManager.instance.IsMyTurn(playerID); } }
 
     Gun[] guns; //Array of guns
@@ -57,7 +62,7 @@ public class Player : MonoBehaviour
 
     void Shoot()
     { 
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))//wasPressedThisFrame to shoot once per press
         {
             /*foreach (Gun gun in guns)
             {
@@ -99,5 +104,25 @@ public class Player : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(EnemyTag))
+        {
+            /*if (HasShield())
+            {
+                DeactivateShield();
+            }
+            else
+            {
+                Destroy(gameObject);*/
+            health.RecieveDamage(health.GetCurrentHealth());
+            //Goodbye player
+            //}
+        }
+
+
+
     }
 }

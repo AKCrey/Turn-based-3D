@@ -53,11 +53,10 @@ public class TurnManager : MonoBehaviour
         players[currentPlayer].GetComponentInChildren<MouseLook>().enabled = false;
         //players[currentPlayer].GetComponentInChildren<Gun>().enabled = false;
 
-
         int nextPlayer = currentPlayer + 1;
         currentPlayer -= 1;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
 
         currentPlayer = nextPlayer;
 
@@ -66,6 +65,7 @@ public class TurnManager : MonoBehaviour
             currentPlayer = 0;
         }
 
+        
         /*Vector3 v = playerCamera.transform.localPosition;
 
         playerCamera.SetParent(players[currentPlayer].transform);
