@@ -54,7 +54,7 @@ public class Gun : MonoBehaviour
 
             //Add forces to bullet
             newProjectile.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-            newProjectile.GetComponent<Rigidbody>().AddForce(cam.transform.up, ForceMode.Impulse);
+            //newProjectile.GetComponent<Rigidbody>().AddForce(cam.transform.up, ForceMode.Impulse);
 
 
         }
@@ -91,7 +91,7 @@ public class Gun : MonoBehaviour
             //newProjectile.GetComponent<BulletMover>().Initialize();
 
             //Add forces to bullet
-            newProjectile.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
+            //newProjectile.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
             newProjectile.GetComponent<Rigidbody>().AddForce(cam.transform.up, ForceMode.Impulse);
 
 

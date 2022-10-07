@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    public string EnemyTag = "Enemy";
+    public string PlayerTag = "Player";
 
     private HealthController health = null;
 
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(EnemyTag))
+        if (collision.gameObject.CompareTag(PlayerTag))
         {
             /*if (HasShield())
             {

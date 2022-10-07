@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
-    public int startingHealthpoints = 1;
+    public int startingHealthpoints = 2;
     public string lethalBulletTag = "ENTER LETHAL BULLET TAG HERE";
     
     public bool isPlayerHealthController = false;
